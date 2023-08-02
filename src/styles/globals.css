@@ -2,10 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+
+
+
+  --primary-text-color: #171832;
+  --link-color: #7047EE;
+  --p-color: #171832;
+  --sidebar-color: #1D1D42;
+
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,11 +32,46 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
+    rgb(var(--background-start-rgb)); */
+  background-color: #F8F8F8;
+}
+
+
+
+.primary-text-color {
+  color: var(--primary-text-color);
+}
+
+.link-color {
+  color: var(--link-color);
+}
+
+.p-color {
+  color: var(--p-color)
+}
+
+.sidebar-bg {
+  background-color: var(--sidebar-color) !important;
+}
+
+
+.ant-menu-light:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
+.ant-menu-light>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
+.ant-menu-item:not(.ant-menu-item-selected):active,
+.ant-menu-item:not(.ant-menu-item-selected):active,
+.ant-menu-light .ant-menu-item-selected,
+.ant-menu-light>.ant-menu .ant-menu-item-selected {
+  background-color: #27274F !important;
+  color: white !important;
+}
+
+.ant-layout-header {
+  background-color: #ffffff !important;
+  padding-inline: 0 !important;
 }
